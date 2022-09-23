@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    tools:context=".Real_Time_Activity">
+    <RelativeLayout
+        android:id="@+id/charts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.mikephil.charting.charts.ScatterChart
+             android:id="@+id/scatterChart"
+             android:layout_width="fill_parent"
+             android:layout_marginEnd="20dp"
+             android:layout_height="300dp"
+             android:background="@color/cardview_light_background"
+             android:visibility="visible"/>
+        <TextView
+          android:id="@+id/chartDdescription"
+         android:layout_width="match_parent"
+         android:layout_height="20dp"
+        android:text=""
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/scatterChart"
+        android:visibility="gone"
+        android:gravity="center"/>
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+             android:id="@+id/chart1"
+             android:layout_width="fill_parent"
+             android:layout_height="150dp"
+             android:background="@color/cardview_light_background"
+             android:visibility="gone"/>
+
+        <TextView
+             android:id="@+id/chart1description"
+             android:layout_width="match_parent"
+             android:layout_height="20dp"
+             android:text=""
+             android:textSize="15sp"
+             android:textColor="@color/black"
+             android:layout_below="@id/chart1"
+             android:gravity="center"/>
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:id="@+id/chart2"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/chart1description"
+            android:background="@color/cardview_light_background"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/chart2description"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text=""
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/chart2"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/infection_status"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/charts"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:text="@string/infection_status"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <!-- layout height for curves was 150dp - changed to add scan buttons-->
+    <ImageView
+        android:id="@+id/curves"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:layout_below="@id/infection_status"
+        android:contentDescription="@string/result_status" />
+    <RelativeLayout
+        android:id="@+id/testButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="290dp"
+        android:layout_below="@id/curves">
+        <Button
+            android:id="@+id/start_virus_test"
+            style="@style/test_buttons"
+            android:layout_toStartOf="@id/center_bar"
+            android:layout_alignParentStart="true"
+            android:onClick="onVirusAnalysis"
+            android:layout_height="90dp"
+            android:layout_width="wrap_content"
+            android:text="EIS"
+            android:layout_marginEnd="10dp"
+            app:strokeWidth="10dp"
+            app:strokeColor="@color/blue_200_dark"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/pulse_amp_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/start_virus_test"
+            android:layout_toStartOf="@id/center_bar"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/pulse_amp_10"
+                style="@style/test_buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/blue_dark"
+                android:onClick="onAmpButton10"
+                android:text="0.01 V"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/pulse_amp_100"
+                style="@style/test_buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@+id/pulse_amp_10"
+                android:background="@color/blue_dark"
+                android:onClick="onAmpButton100"
+                android:text="0.1 V"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/center_bar"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:id="@+id/start_CV_test"
+            style="@style/test_buttons"
+            android:layout_marginStart="10dp"
+            android:layout_height="90dp"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:onClick="onCVAnalysis"
+            android:text="CV"
+            android:layout_toEndOf="@id/center_bar"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/start_dpv_test"
+            style="@style/test_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/center_bar"
+            android:layout_below="@id/pulse_amp_buttons"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="DPV"
+            android:textSize="20sp"
+            android:onClick="onDPVAnalysis"/>
+
+        <RelativeLayout
+            android:id="@+id/scan_rate_buttons"
+            android:visibility="visible"
+            android:layout_width="fill_parent"
+            android:layout_height="130dp"
+            android:layout_below="@id/start_CV_test"
+            android:layout_toEndOf="@id/center_bar">
+            <Button
+                style="@style/test_buttons"
+                android:id="@+id/scan_button_12_5"
+                android:onClick="onScanButton12_5"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/blue_dark"
+                android:textColor="@color/white"
+                android:text="0.0125 V/s"
+                android:textSize="10sp" />
+            <Button
+                style="@style/test_buttons"
+                android:id="@+id/scan_button_25"
+                android:onClick="onScanButton25"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@id/scan_button_12_5"
+                android:background="@color/blue_dark"
+                android:textColor="@color/white"
+                android:text="0.025 V/s"
+                android:textSize="10sp" />
+            <Button
+                android:id="@+id/scan_button_50"
+                android:onClick="onScanButton50"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/scan_button_12_5"
+                android:background="@color/blue_dark"
+                android:textColor="@color/white"
+                android:text="0.050 V/s"
+                android:textSize="10sp" />
+            <Button
+                android:id="@+id/scan_button_100"
+                android:onClick="onScanButton100"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@id/scan_button_50"
+                android:layout_below="@+id/scan_button_25"
+                android:background="@color/blue_dark"
+                android:textColor="@color/white"
+                android:text="0.100 V/s"
+                android:textSize="10sp" />
+        </RelativeLayout>
+        </RelativeLayout>
+    <Button
+        android:id="@+id/export_data"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_above="@id/quit_button"
+        android:layout_centerHorizontal="true"
+        android:onClick="onExportData"
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:text="Export data"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        app:strokeWidth="5dp"
+        app:strokeColor="@color/blue_200_dark"
+        android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/quit_button"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red_700"
+            android:layout_alignParentBottom="true"
+            android:onClick="onQuit"
+            android:text="@string/quit"
+            android:textSize="20sp" />
+    <Button
+        android:id="@+id/xxx_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXX"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onXXX"/>
+
+        <Button
+            android:id="@+id/connection_manager"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
+            android:onClick="onConnect"
+            android:textColor="@color/blue_dark"
+            android:layout_alignParentBottom="true"
+            android:text="@string/connect_text"
+            android:textSize="15sp" />
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,68 @@
+<resources>
+
+    <!--  ABE-Stat Activity Title and Buttons -->
+    <string name="app_name">NFluidEX</string>
+    <string name="app_name_class">ABE-Stat</string>
+    <string name="start_analysis">Start Analysis</string>
+
+    <!--  Bluetooth -->
+    <string name="title_connecting">Connecting&#8230;</string>
+    <string name="title_connected_to">Connected: </string>
+    <string name="title_not_connected">Not Connected</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices&#8230;</string>
+    <string name="button_scan">Scan for devices</string>
+
+    <!-- Real_Time_Activity Strings -->
+    <string name="infection_status_pos">INFECTED</string>
+    <string name="infection_status_neg">NOT INFECTED</string>
+    <string name="infection_status_early">EARLY INFECTION</string>
+    <string name="infection_status_peak">PEAK INFECTION</string>
+    <string name="infection_status_recovery">RECOVERING</string>
+
+
+    <string name="quit">QUIT</string>
+    <string name="save_data">Save Data</string>
+
+    <string name="quit_query">Are you sure you want to quit real-time analyis?</string>
+
+    <!-- Titles -->
+    <string name="connect_text">Connect</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="three_electrode_configuration">3 Electrode Configuration</string>
+    <string name="eis_method_string">%1$s (EIS):\n%2$s Hz to %3$s Hz, %4$s samples/decade %5$s peak\n%6$s s Equilibration at %7$s V bias\n%8$s</string>
+    <string name="file_name_string">%1$s__%2$s-%3$s-%4$s %5$s_%6$s_%7$s.csv</string>
+    <string name="ext_not_available">Warning: the external data storage is not available to write data to!</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="serology_test">Serology Test</string>
+    <string name="diagnostic_test">Diagnostic Test</string>
+    <string name="covid_19_testing_platform">Viral Respiratory Infection Testing Platform</string>
+    <string name="infection_status">Infection Status:</string>
+    <string name="result_status">result status</string>
+    <string name="see_report">See report</string>
+
+    <string name="date_string">%1$s/%2$s/%3$s %4$s:%5$s:%6$s</string>
+
+    <!-- AttachActivity and Data_View_Activity Strings -->
+    <string name="files_heading">ABEStat Files Available for Sharing:</string>
+    <string name="file_sharing">File Sharing</string>
+    <string name="back_to_main">Return to Main</string>
+    <string name="file_corrupted">File corrupted- could not parse data!</string>
+
+    <string name="no_data_to_view">Please select data to view</string>
+    <string name="too_much_data_to_view">Please select only one data file to view</string>
+    <string name="no_data_to_share">Please select file(s) to share</string>
+    <string name="no_files_to_delete">Please select file(s) to delete</string>
+    <string name="no_methods">No Methods Yet</string>
+    <string name="choices">OPTIONS</string>
+
+    <string name="send">E-mail files</string>
+    <string name="view">Plot data</string>
+    <string name="delete">Delete files</string>
+    <string name="delete_dialog">Are you sure you want to delete the selected file(s)?</string>
+    <string name="cv_report">E(V): %1$s\nI(nA): %2$s</string>
+    <string name="waiting">Waiting</string>
+    <string name="nxt_trial">Next trial</string>
+</resources>

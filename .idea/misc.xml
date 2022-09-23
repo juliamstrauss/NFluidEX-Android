@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-anydpi/arrow_down.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/drawable-v24/bg_titlebarrepeat.xml" value="0.20833333333333334" />
+        <entry key="app/src/main/res/drawable/mcgill_logo_big.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22864583333333333" />
+        <entry key="app/src/main/res/layout/activity_result.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/attach_list.xml" value="0.23125" />
+        <entry key="app/src/main/res/layout/bg_titlebarrepeat.xml" value="0.1921875" />
+        <entry key="app/src/main/res/layout/chart.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/custom_title.xml" value="0.1921875" />
+        <entry key="app/src/main/res/layout/dataview.xml" value="0.228125" />
+        <entry key="app/src/main/res/layout/file_row_checkbox.xml" value="0.23125" />
+        <entry key="app/src/main/res/layout/list_row.xml" value="0.13854166666666667" />
+        <entry key="app/src/main/res/layout/main.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/method_edit.xml" value="0.23125" />
+        <entry key="app/src/main/res/layout/method_list.xml" value="0.23125" />
+        <entry key="app/src/main/res/layout/methods_list.xml" value="0.19427083333333334" />
+        <entry key="app/src/main/res/layout/methods_row.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/option_menu.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/realtime.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/share_options_menu.xml" value="0.246875" />
+        <entry key="app/src/main/res/menu/option_menu.xml" value="0.109375" />
+        <entry key="app/src/main/res/menu/share_options_menu.xml" value="0.109375" />
+        <entry key="app/src/main/res/xml/provider_paths.xml" value="0.134375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
